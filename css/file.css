@@ -97,7 +97,7 @@ ul {
 .main-title:hover::before {
   z-index: -1;
   animation: left-move 0.5s linear forwards;
-  -webkit-animation: ;
+  -webkit-animation: left-move 0.5s linear forwards;
 }
 
 .main-title:hover::after {
@@ -142,7 +142,7 @@ ul {
   -webkit-box-shadow: 0 0 10px #ddd;
   -moz-box-shadow: 0 0 10px #ddd;
   box-shadow: 0 0 10px #ddd;
-  /* z-index: 6; */
+  z-index: 6;
 }
 
 .header .container {
@@ -184,6 +184,7 @@ ul {
   opacity: 1;
   z-index: 6;
   top: calc(100% + 1px);
+  display: flex;
 }
 
 .header .main-nav > li > a {
@@ -235,11 +236,12 @@ ul {
   background-color: white;
   border-bottom: 3px solid var(--main-color);
   z-index: -1;
-  display: flex;
+  display: none;
   gap: 40px;
   top: calc(100% + 50px);
   opacity: 0;
   transition: top var(--main-transition), opacity var(--main-transition);
+  border-top: 1px solid rgb(236, 236, 236);
 }
 
 @media (max-width: 767px) {
